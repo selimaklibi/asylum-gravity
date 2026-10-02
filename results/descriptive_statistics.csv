@@ -1,0 +1,11 @@
+,count,mean,std,min,50%,max
+asylum applications (pair-year),39200.0,114.81,2047.504,0.0,0.0,268785.0
+diaspora stock 2010,38808.0,8277.227,51989.261,0.0,84.0,1360982.0
+distance between capitals (km),38612.0,6150.152,4102.248,6.686,5642.567,19586.182
+"GDP per capita, destination (USD)",33096.0,37627.22,25338.007,6580.814,31355.506,116612.883
+"HDI, destination",28000.0,0.869,0.042,0.773,0.876,0.944
+"repression index (corrected, 0-1)",32704.0,0.359,0.293,0.0,0.306,1.0
+common official language,38612.0,0.066,0.249,0.0,0.0,1.0
+colonial link,38612.0,0.032,0.175,0.0,0.0,1.0
+contiguity,38612.0,0.02,0.14,0.0,0.0,1.0
+share of zero flows,39200.0,0.821,,,,

@@ -1,0 +1,43 @@
+                                     count       mean        std       min        50%          max
+asylum applications (pair-year)    39200.0    114.810   2047.504     0.000      0.000   268785.000
+diaspora stock 2010                38808.0   8277.227  51989.261     0.000     84.000  1360982.000
+distance between capitals (km)     38612.0   6150.152   4102.248     6.686   5642.567    19586.182
+GDP per capita, destination (USD)  33096.0  37627.220  25338.007  6580.814  31355.506   116612.883
+HDI, destination                   28000.0      0.869      0.042     0.773      0.876        0.944
+repression index (corrected, 0-1)  32704.0      0.359      0.293     0.000      0.306        1.000
+common official language           38612.0      0.066      0.249     0.000      0.000        1.000
+colonial link                      38612.0      0.032      0.175     0.000      0.000        1.000
+contiguity                         38612.0      0.020      0.140     0.000      0.000        1.000
+share of zero flows                39200.0      0.821        NaN       NaN        NaN          NaN 
+
+| | (1) OLS, report | (2) OLS, fixed index | (3) PPML | (4) PPML, 2010-15, no HDI | (5) PPML, structural |
+|---|---|---|---|---|---|
+| log diaspora stock (2010) | 0.139*** | 0.139*** | 0.109*** | 0.103*** | 0.099*** |
+| | (0.011) | (0.011) | (0.031) | (0.028) | (0.025) |
+| log distance between capitals | 0.015 | 0.015 | 0.204 | 0.302 | 0.127 |
+| | (0.044) | (0.044) | (0.304) | (0.313) | (0.295) |
+| common official language | 0.296*** | 0.296*** | 1.153*** | 1.437*** | 1.310*** |
+| | (0.086) | (0.086) | (0.295) | (0.331) | (0.318) |
+| colonial link | 0.292** | 0.292** | -0.521 | -0.625 | -0.538 |
+| | (0.148) | (0.148) | (0.317) | (0.382) | (0.352) |
+| contiguity | -0.684*** | -0.684*** | 1.773*** | 1.476** | 1.429** |
+| | (0.140) | (0.140) | (0.542) | (0.605) | (0.586) |
+| log GDP per capita (dest.) | 0.110 | 0.110 | 1.923** | 1.295 |  |
+| | (0.099) | (0.099) | (0.820) | (0.939) |  |
+| HDI (dest.) | 2.124 | 2.124 | 27.579* |  |  |
+| | (2.135) | (2.136) | (14.133) |  |  |
+| political index (original, report) | 0.188*** |  |  |  |  |
+| | (0.045) |  |  |  |  |
+| repression index (corrected) |  | 0.434** | 0.537 | 0.690 |  |
+| |  | (0.173) | (0.414) | (0.793) |  |
+| Fixed effects | origin, dest., year | origin, dest., year | origin, dest., year | origin, dest., year | origin×year, dest.×year |
+| Observations | 26,824 | 26,824 | 19,264 | 23,800 | 23,352 |
+| Pair clusters | 5,376 | 5,376 | 3,864 | 3,976 | 4,144 |
+| Fit | adj. R² 0.536 | adj. R² 0.536 | pseudo-R² 0.517 | pseudo-R² 0.604 | pseudo-R² 0.877 |
+
+Correlation of the index components:
+                 fh_civlib_o  fh_polity2_o  fh_polrights_o  ptscale_o
+fh_civlib_o            1.00         -0.94            0.95       0.70
+fh_polity2_o          -0.94          1.00           -0.96      -0.57
+fh_polrights_o         0.95         -0.96            1.00       0.63
+ptscale_o              0.70         -0.57            0.63       1.00
